@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,190 @@
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <!-- ЭТАП 1 · шапка (header) и первый экран (main > section.hero) — по MARATHON.md -->
-  <!-- ЭТАП 2 · меню, «как заказать», подвал -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <img src="./assets/img/logo.svg" alt="" class="logo__icon">
+        <span class="logo__text">Zerno</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#menu" class="nav__link">Меню</a>
+        <a href="#how" class="nav__link">Как заказать</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+
+      <button class="cart-button" type="button" aria-label="Открыть корзину">
+        <img src="./assets/img/icon-bag.svg" alt="" class="cart-button__icon">
+        <span class="cart-button__text">Корзина</span>
+        <span class="cart-button__count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ЭТАП 1 - ПЕРВЫЙ ЭКРАН -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__badge">
+            ☕ Кофейня в центре Бишкека
+          </p>
+
+          <h1 class="hero__title">
+            Кофе без очереди <span class="hero__accent">за 10 минут</span>
+          </h1>
+
+          <p class="hero__lead">
+            Соберите заказ на сайте — мы приготовим его к вашему приходу. Оплата при получении.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#menu" class="button">Смотреть меню</a>
+            <a href="#how" class="button button--ghost">Как это работает</a>
+          </div>
+
+          <ul class="hero__facts">
+            <li class="hero__fact"><b>10 мин</b> готовим заказ</li>
+            <li class="hero__fact"><b>4.9 ★</b> отзывы гостей</li>
+            <li class="hero__fact"><b>с 8:00</b> каждый день</li>
+          </ul>
+        </div>
+
+        <img src="./assets/img/hero.svg" alt="Капучино, кофе с собой и круассан" class="hero__art">
+      </div>
+    </section>
+  <!-- ЭТАП 2 · меню, «как заказать», подвал -->  
+
+    <section class="menu" id="menu">
+      <div class="container">
+        <div class="menu__head">
+          <h2 class="section-title">
+            Меню
+          </h2>
+
+          <label class="search">
+            <img src="./assets/img/icon-search.svg" alt="" class="search__icon">
+            <input type="search" class="search__input" placeholder="Найти: латте, круассан..." aria-label="Поиск по меню">
+          </label>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Категории">
+          <button class="tabs__button is-active" type="button">Всё</button>
+          <button class="tabs__button" type="button">Кофе</button>
+          <button class="tabs__button" type="button">Не кофе</button>
+          <button class="tabs__button" type="button">Десерты</button>
+          <button class="tabs__button" type="button">Зерно домой</button>
+        </div>
+
+        <ul class="menu__grid">
+          <li class="card">
+            <img src="./assets/img/espresso.svg" alt="Эспрессо" class="card__image">
+            <h3 class="card__title">Эспрессо</h3>
+            <p class="card__text">Плотный, с карамельной кремой. Основа всех напитков.</p>
+            <div class="card__bottom">
+              <p class="card__price">120 сом<span class="card__size">30 мл</span></p>
+              <button class="button card__add" type="button">В корзину</button>
+            </div>
+          </li>
+
+          <li class="card">
+            <img src="./assets/img/cappuccino.svg" alt="Капучино" class="card__image">
+            <h3 class="card__title">Капучино</h3>
+            <p class="card__text">Эспрессо и бархатная молочная пена. Классика утра.</p>
+            <div class="card__bottom">
+              <p class="card__price">190 сом<span class="card__size">300 мл</span></p>
+              <button class="button card__add" type="button">В корзину</button>
+            </div>
+          </li>
+
+          <li class="card">
+            <img src="./assets/img/flat-white.svg" alt="Флэт уайт" class="card__image">
+            <h3 class="card__title">Флэт уайт</h3>
+            <p class="card__text">Двойной эспрессо и немного молока — ярче вкус кофе.</p>
+            <div class="card__bottom">
+              <p class="card__price">210 сом<span class="card__size">200 мл</span></p>
+              <button class="button card__add" type="button">В корзину</button>
+            </div>
+          </li>
+
+          <li class="card">
+            <img src="./assets/img/latte.svg" alt="Латте" class="card__image">
+            <h3 class="card__title">Латте</h3>
+            <p class="card__text">Много молока, мягкий вкус, нежная пена сверху.</p>
+            <div class="card__bottom">
+              <p class="card__price">200 сом<span class="card__size">350 мл</span></p>
+              <button class="button card__add" type="button">В корзину</button>
+            </div>
+          </li>
+        </ul>
+
+        <p class="menu__empty">
+          Ничего не нашли. Попробуйте другое слово 🙂
+        </p>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="container">
+        <h2 class="section-title">
+          Как заказать
+        </h2>
+        
+        <ol class="how__list">
+          <li class="how__item">
+            <span class="how__num">1</span>
+            <h3 class="how__title">Выберите</h3>
+            <p class="how__text">Добавьте напитки и десерты в корзину — она сохранится, даже если закрыть вкладку.</p>
+          </li>
+
+          <li class="how__item">
+            <span class="how__num">2</span>
+            <h3 class="how__title">Оформите</h3>
+            <p class="how__text">Имя, телефон и время. Заказ сразу прилетит бариста в Telegram.</p>
+          </li>
+
+          <li class="how__item">
+            <span class="how__num">3</span>
+            <h3 class="how__title">Заберите</h3>
+            <p class="how__text">Через 10 минут всё готово. Назовите номер заказа и оплатите на месте.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="logo logo--light">
+          <img src="./assets/img/logo.svg" alt="" class="logo__icon">
+          <span class="logo__text">Zerno</span>
+        </a>
+        <p class="footer__note">
+          Учебный проект марафона MetaLabs. Автор — Доркин Кирилл.
+        </p>
+      </div>
+
+      <ul class="footer__contacts">
+        <li><span>Адрес</span>Бишкек, ул. Киевская, 77</li>
+        <li><span>Часы</span>каждый день 8:00–22:00</li>
+        <li><span>Телефон</span>+996 700 000 000</li>
+      </ul>
+    </div>
+  </footer>
   <!-- ЭТАП 3 · корзина (aside.cart), затемнение, всплывающее сообщение -->
 
   <script type="module" src="js/app.js"></script>
 </body>
+
 </html>
